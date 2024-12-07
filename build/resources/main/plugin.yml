@@ -1,0 +1,4 @@
+name: AminoAuthorizator
+version: '1.0-SNAPSHOT'
+main: org.august.aminoAuthorizator.AminoAuthorizator
+api-version: '1.20'
