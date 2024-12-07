@@ -38,8 +38,8 @@ auth:
 
 proxy:
   enabled: false
-  host: "45.119.114.203"
-  port: 3129
+  host: "0.0.0.0"
+  port: 0000
   type: "HTTP"
 
 websocket:
