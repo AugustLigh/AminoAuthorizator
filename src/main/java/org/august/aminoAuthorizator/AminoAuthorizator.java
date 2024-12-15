@@ -36,7 +36,7 @@ public final class AminoAuthorizator extends JavaPlugin {
         try {
             // Инициализация
             this.checkInit();
-            if (configManager.get(ConfigKey.PLUGIN_ENABLED)){
+            if (configManager.get(ConfigKey.PROXY_ENABLED)){
                 ProxySettings proxySettings = new ProxySettings(
                         configManager.get(ConfigKey.PROXY_PORT),
                         configManager.get(ConfigKey.PROXY_HOST)
@@ -75,7 +75,7 @@ public final class AminoAuthorizator extends JavaPlugin {
         configManager = new ConfigManager(getDataFolder().getPath());
         dataManager = new DataManager(getDataFolder().getPath(), configManager.get(ConfigKey.DATA_FILE_NAME));
 
-        // Настройка клиента Amino
+        // Настройка Amino
         aminoClient = new ClientApi();
 
         if (!(boolean) configManager.get(ConfigKey.PLUGIN_ENABLED)) {
@@ -94,7 +94,6 @@ public final class AminoAuthorizator extends JavaPlugin {
                     "###############################################################\n\n"
             );
 
-            // Завершаем выполнение плагина
             getServer().getPluginManager().disablePlugin(this);
         }
     }
